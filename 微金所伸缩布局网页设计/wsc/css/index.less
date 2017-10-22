@@ -1,0 +1,64 @@
+header {
+  width: 100%;
+  height: (88rem/75);
+  background-color: #1b1b1f;
+
+  .back {
+    float: left;
+    height: 100%;
+    position: relative;
+    margin-left: (22rem/75);
+    padding-left: (30rem/75);
+
+    i {
+      position: absolute;
+      top:50%;
+      left: 0;
+      width: (20rem/75);
+      height: (35rem/75);
+      background-image: url("../images/back.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: (20rem/75) (35rem/75);
+      transform: translateY(-50%)
+    }
+
+    span {
+      color: #fff;
+      line-height: (88rem/75);
+      font-size: (30rem/75);
+    }
+  }
+  
+}
+
+main {
+  width: 100%;
+  padding:(20rem/75) (34rem/75);
+  box-sizing: border-box;
+
+  .profile {
+    width: (680rem/75);
+    height: (244rem/75);
+    background-image: url("../images/profile_bg.png");
+    border-radius: 3px;
+    position: relative;
+
+    .touxiang {
+      position: absolute;
+      top: (26rem/75);
+      left: (34rem/75);
+      display: block;
+      width:(124rem/75);
+      height: (124rem/75);
+      border: (10rem/75) solid rgba(195, 194, 194, 0.4);
+      box-sizing: border-box;
+      border-radius: 50%;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+  }
+}
