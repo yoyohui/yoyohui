@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var module = {};
+
+        module.exports = {};
+
+        module.exports.name = '小明';
+
+        var exports = module.exports;
+
+        
+
+        // console.log(exports.name); // 小明
+
+        // exports.name = '小红';
+
+        // console.log(module.exports.name); // 小红
+
+        exports = {name: '小红'};
+
+        // ? module.exports.name 的值为什么
+        
+        console.log(module.exports.name);
+    </script>
+</body>
+</html>

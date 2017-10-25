@@ -1,0 +1,13 @@
+{
+  "name": "cart",
+  "version": "1.0.0",
+  "description": "study nodejs modules",
+  // 当包中不包含 index.js 时
+  // 会使用 main 字段指定的入口
+  "main": "abc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "itcast",
+  "license": "ISC"
+}
