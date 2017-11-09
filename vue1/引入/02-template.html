@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <p></p>
+</body>
+</html>
+<script>
+    var obj = {
+        msg:'你好,vue',
+        name:'我是中国人'
+    }
+
+    // 获取dom
+    var oInput = document.querySelector('input')
+    var oP = document.querySelector('p')
+
+    oInput.value = obj.msg
+    oP.innerHTML = obj.name
+</script>

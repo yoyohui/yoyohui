@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" v-model="msg">
+    <input type="text" v-model="name">
+    <p v-text="msg"></p>
+</body>
+</html>
+<script>
+    // function DataBind (options) {
+    //     var obj = options.data()
+    //     var oInputs = document.querySelectorAll('[v-model]')
+    //     for(var i = 0; i < oInputs.length; i++){
+    //         var oInput = oInputs[i]
+    //         var attrVal = oInput.getAttribute('v-model')
+    //         oInput.value = obj[attrVal]
+    //     }
+    // }
+</script>
+<!-- 导入 -->
+<script src="./05-form-value.js"></script>
+<script>
+    var obj = {
+        msg:'我是中国人',
+        name:'name'
+    }
+
+    new DataBind ({
+        data:function () {
+            return obj
+        }
+    })
+</script>

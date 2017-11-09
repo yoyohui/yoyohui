@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     .red{
+         color: red;
+     }
+    </style>
+</head>1
+<body>
+    <div id="app">
+        <!-- <p aa="msg内容"></p> -->
+        <p v-bind:aa="msg">aaa</p>
+        <!-- <p aa="1"></p> -->
+        <!-- <p v-text="msg"></p> -->
+
+        <img v-bind:src="imgPath" alt="">
+        <!-- 错误用法: -->
+        <!-- <img src="imgPath" alt=""> -->
+        <div v-bind:class="color">这是个div</div>
+        <div v-bind:yy="1 + 1">家分店搜if噢is发的</div>
+        <div v-bind:yy="Math.random()">这是个div</div>
+        <!-- <div v-bind:yy="alert(111)">这是个div</div> -->
+
+        <!-- v-bind:也可以进行简写: -->
+        <div :yy="1+1"></div>
+        
+    </div>
+</body>
+</html>
+<!-- 1.引包 -->
+<script src="./vue.js"></script>
+<script>
+    // 实例化
+    var vm = new Vue({
+        data:function () {
+            return {
+                color:'red',  
+                msg:'msg内容',
+                name:1,
+                imgPath:'./img/demo01.jpeg'
+            }
+        }
+    })
+    // 网界面上渲染的位置
+    vm.$mount('#app')
+</script>

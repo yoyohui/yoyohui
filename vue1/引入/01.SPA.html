@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+<!-- 
+    <div id="A" class="a" style="display:block;">A</div>
+
+    <div id="B" class="b" style="display:none;">B</div>
+
+    <div id="C" class="c" style="display:none;">C</div> -->
+
+    <a href="#/a">用户管理</a>
+    <a href="#/b">薪资管理</a>
+    <div id="view">
+  
+    </div>
+</body>
+
+</html>
+<script>
+    // function hashChanged(hashObj) {
+    //     // console.log('hashChanged')
+    //     console.log(hashObj)
+    //     // 获取新旧url
+    //     var newhash = hashObj.newURL.split('#/')[1];
+    //     var oldhash = hashObj.oldURL.split('#/')[1];
+    //     document.getElementById(oldhash).style.display = 'none';
+    //     document.getElementById(newhash).style.display = 'block'
+    // }
+
+    // window.onhashchange = hashChanged
+
+
+      // 监听地址栏中锚点的变化
+  window.onhashchange = function () {
+    console.log(1)
+    // 得到地址栏的锚点值
+    var hash = window.location.hash
+
+    if (hash === '#/a') {
+      document.querySelector('#view').innerHTML = '小胆管理用户'
+    } else if (hash === '#/b') {
+      document.querySelector('#view').innerHTML = '小胆薪资管理'
+    }
+  }
+</script>

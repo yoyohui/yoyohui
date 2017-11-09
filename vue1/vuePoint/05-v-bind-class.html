@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     .red{
+         color: red;
+     }
+     .size{
+         font-size: 40px;
+     }
+     .yellow{
+         background-color: yellow;
+     }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>v-bind  class</h1>
+
+        <div v-bind:class="colorObj">这是个div</div>
+        <div v-bind:class="sex === 1">这是个div</div>
+    
+    </div>
+</body>
+</html>
+<script src="./vue.js"></script>
+<script>
+    var vm = new Vue({
+        data:function () {
+            return {
+                sex:2,
+                msg:'你好,哈哈',
+                colorObj:{
+                    red:true,
+                    size:true,
+                    yellow:true
+                }
+            }
+        }
+    })
+    vm.$mount('#app')
+</script>

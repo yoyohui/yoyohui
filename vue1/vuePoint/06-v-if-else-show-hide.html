@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- v-if的值,如果为true,标签内容显示,如果为false,则标签被干掉
+        v-else如果要使用的话,必须和v-if连用. -->
+
+
+        <h1>v-if的使用</h1>
+        <h1 v-if="msg">这是h1标签</h1>
+
+        <h1>v-else</h1>
+        <h1 v-if="msg">这是h1标签</h1>
+        <h1 v-else>这是else部分</h1>
+
+        <h1>v-show</h1>
+        <!-- v-show的值如果为true,则正常显示,如果为false,则用样式隐藏 -->
+        <h1 v-show="msg">这是show标签</h1>
+        
+        <h1>v-hide</h1>
+        <h1 v-hide="msg">这是hide标签</h1>
+
+    </div>
+</body>
+</html>
+<script src="./vue.js"></script>
+<script>
+    var vm = new Vue({
+        data:function () {
+            return {
+                msg:true
+            }
+        }
+    })
+    vm.$mount('#app')
+</script>

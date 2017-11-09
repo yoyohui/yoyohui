@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p v-text="msg"></p>
+    <p v-text="name"></p>
+</body>
+</html>
+<script>
+    function databind (options) {
+        var obj = options.data()
+
+        // 获取dom
+        // var oP = document.querySelector('[v-text]')
+        // oP.innerHTML = obj.msg
+
+        var oPs = document.querySelectorAll('[v-text]')
+        for(var i = 0; i < oPs.length; i++){
+            var oP = oPs[i]
+            // 这样写是错误的
+            // oP.innerHTML = obj.msg
+
+           var attrVal = oP.getAttribute('v-text')
+           console.log(attrVal)
+
+        //    oP.innerHTML = obj.attrVal
+            oP.innerHTML = obj[attrVal]
+        }
+    }
+
+</script>
+<script>
+    var obj = {
+        msg:'你好,中国',
+        name:'你好,name'
+    }
+
+    new databind ({
+        data:function () {
+            return obj
+        }
+    })
+
+</script>

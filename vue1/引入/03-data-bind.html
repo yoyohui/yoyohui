@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p></p>
+</body>
+
+</html>
+<script>
+    function databind(options) {
+        var obj = options.data()
+
+        // 获取dom
+        var oP = document.querySelector('p')
+        oP.innerHTML = obj.msg
+    }
+</script>
+<script>
+    var obj = {
+        msg: '你好,vue'
+    }
+
+    new databind({
+        data: function () {
+            return obj
+        }
+    })
+
+</script>

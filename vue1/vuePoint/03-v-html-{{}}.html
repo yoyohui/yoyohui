@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    {{msg}}
+    <!-- vue的内容要渲染的区域 -->
+    <div id="app">
+        <h1>v-html的使用</h1>
+        <p v-text="msg"></p>
+        <p v-text="name"></p>
+
+        <br>
+
+        v-html和v-text非常相似
+        v-text指定元素的innerText为内容部分
+        v-html指定元素的innerHTML为内容部分
+
+        <br>
+
+        <p v-html="msg"></p>
+        <p v-html="name"></p>
+
+        <!-- 插值表达式 -->
+        <p>{{msg}}</p>
+        {{msg}}
+        {{name}}
+        <!-- 插值表达式相当于v-text -->
+        <!-- 插值表达式不能用于属性中,除了属性以外的地方都可以使用 -->
+        <!-- <p v-text="{{msg}}"></p> -->
+    </div>
+</body>
+</html>
+<!-- 1.引入 -->
+<script src="./vue.js"></script>
+<script>
+    // 实例化
+    var vm = new Vue({
+        data:function () {
+            return {
+                msg:'html要显示的内容',
+                name:'<h1>name部分</h1>'
+            }
+        }
+    })
+    // 设置渲染的位置
+    vm.$mount('#app')
+</script>

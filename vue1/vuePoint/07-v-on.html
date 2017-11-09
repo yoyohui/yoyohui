@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+       <h1>v-on是用来定义事件的</h1> 
+
+        <button v-on:click="hello">按钮</button>
+
+
+        <button v-on:click="hello(1)">按钮1</button>
+        <button v-on:click="hello(1,2,3,{a:1,b:2},'sdijfosdof')">按钮2</button>
+
+
+
+        <form v-on:click="hello">
+            <!-- .stop的作用就是阻止事件冒泡 -->
+            <!-- .stop被称为修饰符 -->
+            <button v-on:click.stop="hello">按钮</button>
+        </form>
+
+
+        <!-- v-on:可以简写成@ -->
+        <button @click="hello">jsoifdsf</button>
+
+    </div>
+</body>
+</html>
+<script src="./vue.js"></script>
+<script>
+    var vm = new Vue({
+        // data这个方法内部不要写方法,一般写数据
+        data:function () {
+            return {
+
+            }
+        },
+        methods:{
+            hello: function () {
+                // window.alert(11111)
+                console.log(arguments)
+            }
+        }
+    })
+    vm.$mount('#app')
+</script>
